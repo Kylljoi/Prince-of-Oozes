@@ -347,7 +347,11 @@ AddSubClass(
 					description : "\n   " + "I can infuse explosive magic in an item, with a trigger (rec. 5 ft). Casts shatter centred on the item." + "\n   " + "If a creature is within range of more than one mine during a turn, they take half damage after the first." + "\n   " + "Setting the mine is a 1 minute ritual, and explodes if moved. Only I can disarm it." + "\n   " + "I can set an amount equal to my intelligence modifier, refreshing at the end of a long rest. Existing mines lose magic.",
 				},
 				
-				"weapon enchantment expertise" : {
+				
+				////////////////////////////////////////////////////////////////////////////
+				////////////////////////HALP HERE PLS///////////////////////////////////////
+				////////////////////////////////////////////////////////////////////////////
+				"weapon enchantment expertise" : { 
 					name : "Weapon Enchantment Expertise",
 					description : "\n   " + "I learn the spell magical weapon, and at 9th level I learn the spell elemental weapon.When you cast magical weapon or elemental weapon, you can target a weapon that is already magical, adding to any effect the weapon already has." + "\n   " + "Additionally, when you have to make a Constitution saving throw to maintain concentration, you do so with advantage.",
 					additional : ["magical weapon","magical weapon","magical weapon","magical weapon","magical weapon","magical weapon","magical weapon","magical weapon","magical weapon and elemental weapon","magical weapon and elemental weapon","magical weapon and elemental weapon","magical weapon and elemental weapon","magical weapon and elemental weapon","magical weapon and elemental weapon","magical weapon and elemental weapon","magical weapon and elemental weapon","magical weapon and elemental weapon","magical weapon and elemental weapon","magical weapon and elemental weapon","magical weapon and elemental weapon"],
@@ -357,7 +361,6 @@ AddSubClass(
 						selection : "magical weapon",
 					}, {
 						name : "Weapon Enchantment Expertise",
-						minlevel : 9,
 						spells : "elemental weapon",
 						selection : "elemental weapon",
 					}]
