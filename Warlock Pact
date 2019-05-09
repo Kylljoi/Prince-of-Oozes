@@ -1,0 +1,86 @@
+
+	/*	-WHAT IS THIS?-
+	This file adds optional material to "MPMB's Character Record Sheet" found at https://flapkan.com/mpmb/charsheets
+	Import this file using the "Add Extra Materials" bookmark.
+
+	-KEEP IN MIND-
+	It is recommended to enter the code in a fresh sheet before adding any other information (i.e. before making your character with it).
+*/
+
+/*	-INFORMATION-
+	Subject:	Subclass
+	Effect:		This script adds a subclass for the Warlock, called "The Dark"
+				This subclass has been made by M.T. Black, Greg Marks, & James Introcaso
+				This code uses the subclass as it is featured in Mirt's Undermountain Survival Guide
+	Code by:	Darren
+	Date:		2019-04-16 (sheet v12.999)
+
+*/
+
+var iFileName = "Warlock - the Dark [M.T. Black's work, transcribed by Darren].js";
+RequiredSheetVersion(12.999);
+
+SourceList["MUSG:TD"] = {
+	name : "Mirt's Undermountain Survival Guide: the Dark",
+	abbreviation : "MUSG:TD",
+	group : "Dungeon Masters Guild",
+	url : "https://www.dmsguild.com/product/269024/Mirts-Undermountain-Survival-Guide?src=newest_community&filters=45680",
+	date : "2019/03/09" // unsure of exact date of release
+};
+
+AddSubClass("warlock", "Prince of OOze", {
+	regExpSearch : /^(?=.*dark)/i,
+	subname : "Prince of Ooze",
+    source : ["MUSG:TD", 18],
+    fullname : "Warlock: Prince of Ooze",
+	spellcastingExtra : ["absorb elements", "grease", "enlarge/reduce", "meld into stone", "protection from energy", "freedom of movement", "vitriolic sphere", "melf's acid arrow", "seeming" , "transmute rock"],
+	features : {
+		"subclassfeature1" : {
+			name : "Gelatenous Form",
+			source : ["MUSG:TD", 18],
+			minlevel : 1,
+			description : desc([
+				"Your form becomes more flexible and fluid. You can morph your body to move through a space as narrow as a foot wide without squeezing",
+				"
+		},
+		"subclassfeature6" : {
+			name : "Impact absorption",
+			source : ["MUSG:TD", 18],
+			minlevel : 6,
+			description : desc([
+                		"Resistant to nonmagical bludgeoning, piercing, and slashing damage"
+			]),
+            		
+		},
+		"subclassfeature10" : {
+			name : "Partial Digestion",
+			source : ["MUSG:TD", 18],
+			minlevel : 10,
+			description : desc([
+				"Once on each of your turns whenever you deal acid damage from a spell that expends a spell slot",
+				"You can restore hit points to yourself equal to CHA. Mod.",
+				
+           	 ]),
+            	
+		},
+		"subclassfeature14" : {
+			name : "Cellular Division",
+			source : ["MUSG:TD", 18],
+			minlevel : 14,
+			description : desc([
+				"When you are hit by an attack you can choose to split your form in two.",
+				"The two resulting forms are a size smaller than your normal size and each have HP equal to half of when ",
+                		"you split. You use your movement for one form but not both",
+                		"After 1 minute, if the two forms move more than 60 feet from each"
+                    "other, or until one of the forms drops to 0 hit points, the two"
+                    "forms merge back into your normal self with your hit points"
+                    "equal to the current hit points of the two individual forms"
+                      "added together.",
+                		"1 min."
+			]),
+			usages : 1,
+            		recovery : "Long Rest",
+            		action : ["reaction", ""]
+		}
+	}
+});
